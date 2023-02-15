@@ -13,18 +13,16 @@ public class DesafioArray {
 		double[]notas = new double[n];
 		
 		for ( int i = 0; i<n; i++ ) {
-			int index = i+1;
-			String nota = JOptionPane.showInputDialog("Digite a nota " + index);
+			String nota = JOptionPane.showInputDialog("Digite a nota " + (i+1));
 			double notaAluno = Double.parseDouble(nota);
 			notas[i] = notaAluno;
 		}
 		
 		double somaNotas = 0;
-		
 		for (double notaAluno : notas) {
 			somaNotas = somaNotas + notaAluno;
 		}
-
+		
 		double media = somaNotas/n;
 		
 		String msg = String.format("A média do aluno é = %.2f", media);
