@@ -6,14 +6,13 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		String numero = JOptionPane.showInputDialog("Digite quantos notas serão lançadas!");
-		int n = Integer.parseInt(numero);
+		Notas notas = new Notas();
+		notas.entradaNotas();
 		
-		int c = 0;
-		while(c<n) {
-			Notas.adicionarNota();
-			c++;
-		}
+		Operacoes operacoes = new Operacoes();
+		String msg = String.format("A média do aluno é = %.2f pontos", operacoes.media());
+		
+		JOptionPane.showMessageDialog(null, msg);
 	}
 
 }
